@@ -10,6 +10,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
@@ -41,9 +42,14 @@ class MainViewModel @Inject constructor(
                 booksSections.add(BooksSections(Section.BUSINESS, books.filter { it.genre == "Business" }))
                 booksSections
             }.onSuccess {
-                _model.value = UiModel.Content(it)
+                withContext(Dispatchers.Main) {
+                    _model.value = UiModel.Content(it)
+                }
             }.onFailure {
-                _model.value = UiModel.ShowError
+                withContext(Dispatchers.Main) {
+                    it.printStackTrace()
+                    _model.value = UiModel.ShowError
+                }
             }
         }
 

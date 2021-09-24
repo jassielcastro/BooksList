@@ -1,36 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="16dp">
+    android:layout_width="140dp"
+    android:layout_height="240dp"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="120dp"
-        android:layout_height="120dp">
-
-        <ImageView
-            android:id="@+id/bookCover"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/titleBook"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:ellipsize="end"
             android:lines="1"
-            android:ellipsize="end"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/bookCover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/purple_500"
+            app:layout_constraintBottom_toTopOf="@id/authorBook"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleBook" />
 
         <TextView
             android:id="@+id/authorBook"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:ellipsize="end"
             android:lines="1"
-            android:ellipsize="end"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

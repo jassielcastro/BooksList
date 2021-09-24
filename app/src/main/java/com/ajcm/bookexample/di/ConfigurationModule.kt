@@ -24,7 +24,7 @@ class ConfigurationModule {
 
     @BaseUrl
     @Provides
-    fun provideBooksUrl(): String = "https://raw.githubusercontent.com/ejgteja"
+    fun provideBooksUrl(): String = "https://raw.githubusercontent.com/ejgteja/"
 
     @Provides
     fun provideConnectionSpec(): ConnectionSpec {

@@ -8,10 +8,10 @@ import javax.inject.Inject
 
 class RemoteDataSource @Inject constructor(private val api: BookApi) : IRemoteBooksDataSource {
     override suspend fun getBooks(): List<Book> {
-        return api.getBooksAsync().await()
+        return api.getBooksAsync().await().results.books
     }
 
     override suspend fun getBestSellers(): List<BestSeller> {
-        return api.getBestSellersAsync().await()
+        return api.getBestSellersAsync().await().results.best_sellers.map { BestSeller(it) }
     }
 }

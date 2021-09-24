@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ajcm.bookexample.R
 import com.ajcm.bookexample.databinding.ItemBookSectionsBinding
 import com.ajcm.domain.entities.Book
+import com.bumptech.glide.Glide
 
 class BookChildAdapter(private val books: List<Book>) :
     RecyclerView.Adapter<BookChildAdapter.ViewHolder>() {
@@ -15,8 +16,11 @@ class BookChildAdapter(private val books: List<Book>) :
         private val binding = ItemBookSectionsBinding.bind(view)
 
         fun bind(book: Book) {
-            binding.titleBook.text = book.title
-            binding.authorBook.text = book.author
+            with(binding) {
+                Glide.with(bookCover.context).load(book.img).into(bookCover)
+                titleBook.text = book.title
+                authorBook.text = book.author
+            }
         }
     }
 
