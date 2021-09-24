@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BookExample</string>
+    <string name="title_error">An error was occurred, please try again.</string>
+    <string name="try_again">Try again</string>
 </resources>
