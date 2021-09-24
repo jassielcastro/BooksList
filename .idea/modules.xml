@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/BookExample.iml" filepath="$PROJECT_DIR$/.idea/modules/BookExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/annotation/BookExample.annotation.iml" filepath="$PROJECT_DIR$/.idea/modules/annotation/BookExample.annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BookExample.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BookExample.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/BookExample.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/BookExample.data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/BookExample.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/BookExample.domain.iml" />
     </modules>
   </component>
 </project>
